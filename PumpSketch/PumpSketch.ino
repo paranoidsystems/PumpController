@@ -30,7 +30,10 @@ void loop() {
                 Serial.print("I received: ");
                 Serial.println(incomingByte, DEC);
                 //set fan speed to data that was sent
+                //map the incomming (0-100) to (0-255)
+                incomingbyte = map(incomingbyte, 0, 100, 0, 255);
                 analogWrite(Pump,incomingByte);
+          }
 
 //read speed signal from pump
   
