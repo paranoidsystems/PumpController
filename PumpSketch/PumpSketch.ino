@@ -35,6 +35,6 @@ void loop() {
                 analogWrite(Pump,incomingByte);
           }
 
-//read speed signal from pump
-  
+//All auto running features go here. This should be based on info the hardware can get. if any.
+  //no code here yet.
 }
