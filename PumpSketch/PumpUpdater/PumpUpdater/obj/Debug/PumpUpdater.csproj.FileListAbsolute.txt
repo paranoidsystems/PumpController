@@ -1,0 +1,10 @@
+C:\Users\paran\AppData\Local\Temporary Projects\PumpUpdater\bin\Debug\PumpUpdater.exe.config
+C:\Users\paran\AppData\Local\Temporary Projects\PumpUpdater\bin\Debug\PumpUpdater.exe
+C:\Users\paran\AppData\Local\Temporary Projects\PumpUpdater\bin\Debug\PumpUpdater.pdb
+C:\Users\paran\AppData\Local\Temporary Projects\PumpUpdater\obj\Debug\PumpUpdater.csprojResolveAssemblyReference.cache
+C:\Users\paran\AppData\Local\Temporary Projects\PumpUpdater\obj\Debug\PumpUpdater.Form1.resources
+C:\Users\paran\AppData\Local\Temporary Projects\PumpUpdater\obj\Debug\PumpUpdater.Properties.Resources.resources
+C:\Users\paran\AppData\Local\Temporary Projects\PumpUpdater\obj\Debug\PumpUpdater.csproj.GenerateResource.cache
+C:\Users\paran\AppData\Local\Temporary Projects\PumpUpdater\obj\Debug\PumpUpdater.csproj.CoreCompileInputs.cache
+C:\Users\paran\AppData\Local\Temporary Projects\PumpUpdater\obj\Debug\PumpUpdater.exe
+C:\Users\paran\AppData\Local\Temporary Projects\PumpUpdater\obj\Debug\PumpUpdater.pdb
