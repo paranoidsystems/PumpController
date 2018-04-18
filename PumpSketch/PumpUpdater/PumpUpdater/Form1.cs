@@ -42,14 +42,14 @@ namespace PumpUpdater
         {
             //setup com port
             SerialPort mySerialPort = new SerialPort(ComboBox.Text);
-            mySerialPort.BaudRate = 9600;
+            mySerialPort.BaudRate = 115200;
             mySerialPort.Parity = Parity.None;
             mySerialPort.StopBits = StopBits.One;
             mySerialPort.DataBits = 8;
             mySerialPort.Handshake = Handshake.None;
             //open port, send test, close port.
             mySerialPort.Open();
-            mySerialPort.Write("hello world" + " value set to " + trackBar1.Value + Environment.NewLine);
+            mySerialPort.Write(""+trackBar1.Value+Environment.NewLine);
             mySerialPort.Close();
             //did your device recieve data?
         }

@@ -1,10 +1,14 @@
 //setup vars
 int Pump = 9;           // the PWM pin the Pump is attached to
+int incomingByte = 0;
+const byte numChars = 32;
+char receivedChars[numChars]; // an array to store the received data
+boolean newData = false;
 
 void setup() {
-// put your setup code here, to run once:
+// put your setup code here, to run once
 //open serial port
-Serial.begin(9600);
+Serial.begin(115200);
 //setup pins
 // declare pin 9 to be an output:
   pinMode(Pump, OUTPUT);  
@@ -20,21 +24,40 @@ Serial.begin(9600);
 
 void loop() {
 // put your main code here, to run repeatedly:
-//read serial, this is speed overide currently
-// send data only when you receive data:
-        if (Serial.available() > 0) {
-                // read the incoming byte:
-                incomingByte = Serial.read();
-
-                // say what you got:
-                Serial.print("I received: ");
-                Serial.println(incomingByte, DEC);
-                //set fan speed to data that was sent
-                //map the incomming (0-100) to (0-255)
-                incomingbyte = map(incomingbyte, 0, 100, 0, 255);
-                analogWrite(Pump,incomingByte);
+recvWithEndMarker();
+showNewData();
           }
 
+
+void recvWithEndMarker() {
+ static byte ndx = 0;
+ char endMarker = '\n';
+ char rc;
+ 
+ // if (Serial.available() > 0) {
+           while (Serial.available() > 0 && newData == false) {
+ rc = Serial.read();
+
+ if (rc != endMarker) {
+ receivedChars[ndx] = rc;
+ ndx++;
+ if (ndx >= numChars) {
+ ndx = numChars - 1;
+ }
+ }
+ else {
+ receivedChars[ndx] = '\0'; // terminate the string
+ ndx = 0;
+ newData = true;
+ }
+ }
+}
+
+void showNewData() {
+ if (newData == true) {
+ Serial.println(receivedChars);
+ newData = false;
+ }
 //All auto running features go here. This should be based on info the hardware can get. if any.
   //no code here yet.
 }

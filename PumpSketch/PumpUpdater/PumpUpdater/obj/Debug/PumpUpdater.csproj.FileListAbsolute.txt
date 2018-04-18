@@ -18,3 +18,13 @@ C:\Users\l.russell\Documents\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUp
 C:\Users\l.russell\Documents\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUpdater\obj\Debug\PumpUpdater.csproj.CoreCompileInputs.cache
 C:\Users\l.russell\Documents\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUpdater\obj\Debug\PumpUpdater.exe
 C:\Users\l.russell\Documents\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUpdater\obj\Debug\PumpUpdater.pdb
+C:\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUpdater\bin\Debug\PumpUpdater.exe.config
+C:\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUpdater\bin\Debug\PumpUpdater.exe
+C:\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUpdater\bin\Debug\PumpUpdater.pdb
+C:\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUpdater\obj\Debug\PumpUpdater.csprojResolveAssemblyReference.cache
+C:\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUpdater\obj\Debug\PumpUpdater.Form1.resources
+C:\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUpdater\obj\Debug\PumpUpdater.Properties.Resources.resources
+C:\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUpdater\obj\Debug\PumpUpdater.csproj.GenerateResource.cache
+C:\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUpdater\obj\Debug\PumpUpdater.csproj.CoreCompileInputs.cache
+C:\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUpdater\obj\Debug\PumpUpdater.exe
+C:\GitHub\PumpController\PumpSketch\PumpUpdater\PumpUpdater\obj\Debug\PumpUpdater.pdb
