@@ -29,6 +29,17 @@ namespace PumpUpdater
 
         private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ConnectSend();
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            ConnectSend();
+        }
+
+        private void ConnectSend()
+        {
             //setup com port
             SerialPort mySerialPort = new SerialPort(ComboBox.Text);
             mySerialPort.BaudRate = 9600;
@@ -38,10 +49,9 @@ namespace PumpUpdater
             mySerialPort.Handshake = Handshake.None;
             //open port, send test, close port.
             mySerialPort.Open();
-            mySerialPort.Write("hello world");
+            mySerialPort.Write("hello world" + " value set to " + trackBar1.Value + Environment.NewLine);
             mySerialPort.Close();
             //did your device recieve data?
-
         }
     }
 }
