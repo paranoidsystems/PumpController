@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ComboBox = new System.Windows.Forms.ComboBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.PWMBar = new System.Windows.Forms.ProgressBar();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,14 +49,15 @@
             this.button1.Text = "Auto Detect Port";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // ComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "Pick a port";
+            this.ComboBox.FormattingEnabled = true;
+            this.ComboBox.Location = new System.Drawing.Point(13, 27);
+            this.ComboBox.Name = "ComboBox";
+            this.ComboBox.Size = new System.Drawing.Size(121, 21);
+            this.ComboBox.TabIndex = 1;
+            this.ComboBox.Text = "Pick a port";
+            this.ComboBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedIndexChanged);
             // 
             // trackBar1
             // 
@@ -127,7 +128,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.PWMBar);
             this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ComboBox);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Pump Control";
@@ -140,7 +141,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ComboBox;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.ProgressBar PWMBar;
         private System.Windows.Forms.Button button2;
