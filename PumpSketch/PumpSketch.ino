@@ -1,5 +1,6 @@
 //setup vars
 int Pump = 9;           // the PWM pin the Pump is attached to
+int PumpPWM = 255;
 int incomingByte = 0;
 const byte numChars = 32;
 char receivedChars[numChars]; // an array to store the received data
@@ -14,21 +15,24 @@ Serial.begin(115200);
   pinMode(Pump, OUTPUT);  
 //start up procedure.
 //set PWM to 255 (100%)
-  analogWrite(Pump,255);
+  analogWrite(Pump,PumpPWM);
 //wait 3 seconds.
   delay(3000);
 //set PWM to 153 (60%)
-  analogWrite(Pump,255);
+  analogWrite(Pump,153);
 //done...off to the loop!
 }
 
 void loop() {
 // put your main code here, to run repeatedly:
 recvWithEndMarker();
-showNewData();
-          }
+//if (receivedChars >= 0 && receivedChars <= 10) {
+SetPWM();
+//}
+ComReply();
+}
 
-
+//recieve string of data
 void recvWithEndMarker() {
  static byte ndx = 0;
  char endMarker = '\n';
@@ -53,11 +57,19 @@ void recvWithEndMarker() {
  }
 }
 
-void showNewData() {
+//reply via serial
+void ComReply() {
  if (newData == true) {
  Serial.println(receivedChars);
+ Serial.println(PumpPWM);
  newData = false;
+ }
+}
+void SetPWM(){
+  PumpPWM = receivedChars;
+  //PumpPWM = map(PumpPWM,0,10,0,255);
+  analogWrite(Pump,PumpPWM);
  }
 //All auto running features go here. This should be based on info the hardware can get. if any.
   //no code here yet.
-}
+
