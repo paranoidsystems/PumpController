@@ -18,7 +18,7 @@ namespace PumpUpdater
          
             InitializeComponent();
 
-            //populate ports in combo box
+            //populate ports in combo box1014
             string[] ports = SerialPort.GetPortNames();
             ComboBox.Items.Clear();
             foreach (string comport in ports)
