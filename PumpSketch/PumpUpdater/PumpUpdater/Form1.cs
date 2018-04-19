@@ -29,7 +29,7 @@ namespace PumpUpdater
 
         private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ComboBox.SelectedIndex > 0)
+            if (ComboBox.SelectedIndex > -1)
             {
                 trackBar1.Enabled = true;
                 ConnectSend();
