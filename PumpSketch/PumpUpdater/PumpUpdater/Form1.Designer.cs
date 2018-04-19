@@ -35,8 +35,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.ModeLabel = new System.Windows.Forms.Label();
             this.PWMLabel = new System.Windows.Forms.Label();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.SpeedBar = new System.Windows.Forms.Label();
+            this.SpeedLabel = new System.Windows.Forms.Label();
+            this.RPMLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +72,7 @@
             // PWMBar
             // 
             this.PWMBar.Location = new System.Drawing.Point(154, 115);
+            this.PWMBar.Maximum = 255;
             this.PWMBar.Name = "PWMBar";
             this.PWMBar.Size = new System.Drawing.Size(189, 23);
             this.PWMBar.TabIndex = 3;
@@ -103,29 +104,31 @@
             this.PWMLabel.TabIndex = 6;
             this.PWMLabel.Text = "Current PWM";
             // 
-            // progressBar2
+            // SpeedLabel
             // 
-            this.progressBar2.Location = new System.Drawing.Point(154, 82);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(189, 23);
-            this.progressBar2.TabIndex = 7;
+            this.SpeedLabel.AutoSize = true;
+            this.SpeedLabel.Location = new System.Drawing.Point(76, 82);
+            this.SpeedLabel.Name = "SpeedLabel";
+            this.SpeedLabel.Size = new System.Drawing.Size(75, 13);
+            this.SpeedLabel.TabIndex = 8;
+            this.SpeedLabel.Text = "Current Speed";
             // 
-            // SpeedBar
+            // RPMLabel
             // 
-            this.SpeedBar.AutoSize = true;
-            this.SpeedBar.Location = new System.Drawing.Point(76, 82);
-            this.SpeedBar.Name = "SpeedBar";
-            this.SpeedBar.Size = new System.Drawing.Size(75, 13);
-            this.SpeedBar.TabIndex = 8;
-            this.SpeedBar.Text = "Current Speed";
+            this.RPMLabel.AutoSize = true;
+            this.RPMLabel.Location = new System.Drawing.Point(154, 82);
+            this.RPMLabel.Name = "RPMLabel";
+            this.RPMLabel.Size = new System.Drawing.Size(40, 13);
+            this.RPMLabel.TabIndex = 9;
+            this.RPMLabel.Text = "0 RPM";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(355, 189);
-            this.Controls.Add(this.SpeedBar);
-            this.Controls.Add(this.progressBar2);
+            this.Controls.Add(this.RPMLabel);
+            this.Controls.Add(this.SpeedLabel);
             this.Controls.Add(this.PWMLabel);
             this.Controls.Add(this.ModeLabel);
             this.Controls.Add(this.button2);
@@ -150,8 +153,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label ModeLabel;
         private System.Windows.Forms.Label PWMLabel;
-        private System.Windows.Forms.ProgressBar progressBar2;
-        private System.Windows.Forms.Label SpeedBar;
+        private System.Windows.Forms.Label SpeedLabel;
+        private System.Windows.Forms.Label RPMLabel;
     }
 }
 
