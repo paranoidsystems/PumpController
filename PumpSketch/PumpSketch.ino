@@ -60,16 +60,22 @@ void recvWithEndMarker() {
 //reply via serial
 void ComReply() {
  if (newData == true) {
- Serial.println(receivedChars);
+ //Serial.println(receivedChars);
  Serial.println(PumpPWM);
+ Serial.println(1200);
  newData = false;
  }
 }
 void SetPWM(){
   PumpPWM = atoi(receivedChars);
+  if (PumpPWM > 0){
   PumpPWM = map(PumpPWM,0,10,0,255);
+  }
+  if (PumpPWM < 1){
+    PumpPWM = 153;
+  }
   analogWrite(Pump,PumpPWM);
- }
+}
 //All auto running features go here. This should be based on info the hardware can get. if any.
   //no code here yet.
 
