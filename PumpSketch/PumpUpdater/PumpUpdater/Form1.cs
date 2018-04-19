@@ -29,12 +29,16 @@ namespace PumpUpdater
 
         private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ConnectSend();
-
+            if (ComboBox.SelectedIndex > -1)
+            {
+                trackBar1.Enabled = true;
+                ConnectSend();
+            }
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
+            //update when slider is moved.
             ConnectSend();
         }
 
