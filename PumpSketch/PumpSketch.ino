@@ -67,7 +67,7 @@ void ComReply() {
 }
 void SetPWM(){
   PumpPWM = atoi(receivedChars);
-  //PumpPWM = map(PumpPWM,0,10,0,255);
+  PumpPWM = map(PumpPWM,0,10,0,255);
   analogWrite(Pump,PumpPWM);
  }
 //All auto running features go here. This should be based on info the hardware can get. if any.
