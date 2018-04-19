@@ -66,7 +66,7 @@ void ComReply() {
  }
 }
 void SetPWM(){
-  PumpPWM = receivedChars;
+  PumpPWM = atoi(receivedChars);
   //PumpPWM = map(PumpPWM,0,10,0,255);
   analogWrite(Pump,PumpPWM);
  }
