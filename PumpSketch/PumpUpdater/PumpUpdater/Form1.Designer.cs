@@ -118,9 +118,9 @@
             this.RPMLabel.AutoSize = true;
             this.RPMLabel.Location = new System.Drawing.Point(154, 82);
             this.RPMLabel.Name = "RPMLabel";
-            this.RPMLabel.Size = new System.Drawing.Size(40, 13);
+            this.RPMLabel.Size = new System.Drawing.Size(58, 13);
             this.RPMLabel.TabIndex = 9;
-            this.RPMLabel.Text = "0 RPM";
+            this.RPMLabel.Text = "0000 RPM";
             // 
             // Form1
             // 

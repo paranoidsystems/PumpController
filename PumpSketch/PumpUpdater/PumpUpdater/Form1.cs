@@ -54,6 +54,8 @@ namespace PumpUpdater
             //open port, send test, close port.
             mySerialPort.Open();
             mySerialPort.Write(""+trackBar1.Value+Environment.NewLine);
+            string PumpRPM = mySerialPort.ReadLine();
+            RPMLabel.Text = PumpRPM+" RPM";
             mySerialPort.Close();
             //did your device recieve data?
         }
